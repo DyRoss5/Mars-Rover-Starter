@@ -60,11 +60,11 @@ it("response returned by receiveMessage contains the name of the message", funct
     expect(rover.position).toEqual(98382);
   });
 
-  //it("responds with the position for the move command", function() {
-    //let commands = [new Command('MOVE', 1000)];
-    //let message = new Message('Moving position: 1000', commands);
-    //let rover = new Rover(98382);   
-    //let response = rover.receiveMessage(message); 
-    //expect(rover.position).toEqual(1000);
-  //});
+  it("responds with the position for the move command", function() {
+    let commands = [new Command('MOVE', 1000)];
+    let message = new Message('Moving position: 1000', commands);
+    let rover = new Rover(98382);   
+    let response = rover.receiveMessage(message); 
+    expect(rover.position).toEqual(1000);
+  });
 });
